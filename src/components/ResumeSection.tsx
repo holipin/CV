@@ -225,15 +225,7 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ onCopyToast }) => 
                     </div>
                   </div>
 
-                  {/* Education & Certifications */}
-                  <div>
-                    <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-rose-400 mb-2">
-                      Education &amp; Credentials
-                    </h4>
-                    <p className="text-xs text-slate-300">
-                      <strong className="text-white">B.S. in Computer Science</strong> - UC Berkeley (Summa Cum Laude) • Google Cloud Professional Cloud Developer • Angular Certified Architect
-                    </p>
-                  </div>
+
                 </div>
               </div>
             </div>
