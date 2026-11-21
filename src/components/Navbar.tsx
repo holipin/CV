@@ -102,10 +102,10 @@ export const Navbar: React.FC<NavbarProps> = () => {
         <div className="hidden sm:flex items-center gap-3">
           <a
             id="navbar-resume-link-btn"
-            href="#resume"
+            href="#projects"
             className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 transition-colors"
           >
-            Executive Resume
+            Projects
           </a>
         </div>
 
