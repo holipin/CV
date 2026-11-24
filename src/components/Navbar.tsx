@@ -68,11 +68,11 @@ export const Navbar: React.FC<NavbarProps> = () => {
                 {PERSONAL_INFO.name}
               </span>
               <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-mono px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-300 border border-rose-500/30">
-                <Code2 className="w-3 h-3" /> Angular 19 &amp; TS
+                <Code2 className="w-3 h-3" /> Matthew 22:37-40
               </span>
             </div>
             <span className="text-xs text-slate-400 hidden sm:block">
-              Lead Frontend Architect
+               Principal Systems Architect + Fullstack Dev
             </span>
           </div>
         </a>
@@ -102,10 +102,10 @@ export const Navbar: React.FC<NavbarProps> = () => {
         <div className="hidden sm:flex items-center gap-3">
           <a
             id="navbar-resume-link-btn"
-            href="#resume"
+            href="#projects"
             className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 transition-colors"
           >
-            Executive Resume
+            Projects
           </a>
         </div>
 
