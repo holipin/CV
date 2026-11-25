@@ -7,10 +7,12 @@ import {
   Sparkles,
   ShieldCheck,
   Building,
+  Download,
 } from 'lucide-react';
 import { RESUME_DATA, RESUME_HEADER } from '../data/portfolioData';
 import { EXPERIENCES } from '../data/portfolioExperienceData';
 import { PROJECTS } from '../data/portfolioProjectData';
+import { exportResumePdf } from '../utils/exportResumePdf';
 
 interface ResumeSectionProps {
   onCopyToast: (msg: string) => void;
@@ -36,11 +38,23 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ onCopyToast }) => 
           </div>
 
           {/* Verification Badge */}
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700/80 text-xs font-medium text-slate-300">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
               <span>{RESUME_HEADER.verificationBadge}</span>
             </div>
+            <button
+              type="button"
+              onClick={() => {
+                const fileName = exportResumePdf();
+                onCopyToast(`Resume exported as ${fileName}`);
+              }}
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-rose-500 text-white text-xs font-semibold shadow-lg shadow-rose-500/20 transition hover:bg-rose-400 focus:outline-none focus:ring-2 focus:ring-rose-300 focus:ring-offset-2 focus:ring-offset-slate-950"
+              aria-label="Download executive resume as PDF"
+            >
+              <Download className="w-4 h-4" />
+              <span>Export PDF</span>
+            </button>
           </div>
         </div>
 
@@ -158,7 +172,7 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ onCopyToast }) => 
                     </div>
 
                     <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-sky-400 mt-1 font-mono">
-                      <span>{RESUME_DATA.contact.portfolio}</span>
+                      <span className="font-bold">{RESUME_DATA.contact.portfolio}</span>
                       <span>•</span>
                       <span>{RESUME_DATA.contact.linkedin}</span>
                       <span>•</span>
